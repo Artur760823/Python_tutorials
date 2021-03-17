@@ -7,7 +7,7 @@ def days_to_units(num_of_days):
 
 def validate_and_execute():
     try:
-        user_days = int(user_input)
+        user_days = int(num_of_days_element)
         if user_days > 0:
             my_result = days_to_units(user_days)
             print(my_result)
@@ -23,5 +23,7 @@ def validate_and_execute():
 user_input = ""
 
 while user_input != "exit":
-    user_input = input("Hey user, enter a number of days and I will convert it to hours!\n")
-    validate_and_execute()
+    user_input = input("Hey user, enter number of days as a coma separated list and I will convert it to hours!\n")
+
+    for num_of_days_element in user_input.split(","):
+        validate_and_execute()
