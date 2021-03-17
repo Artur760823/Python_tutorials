@@ -13,9 +13,15 @@ def validate_and_execute():
             print(my_result)
         elif user_days == 0:
             print("Zero is not valid value")
+        else:
+            print("you entered negative number, no conversion for you")
     except ValueError:
         print("Invalid input value, your input is not a valid number!!!")
+    if user_input == "exit":
+        print("Bye bye")
 
-user_input = input("Hey user, enter a number of days and I will convert it to hours!\n")
+user_input = ""
 
-validate_and_execute()
+while user_input != "exit":
+    user_input = input("Hey user, enter a number of days and I will convert it to hours!\n")
+    validate_and_execute()
