@@ -25,5 +25,13 @@ user_input = ""
 while user_input != "exit":
     user_input = input("Hey user, enter number of days as a coma separated list and I will convert it to hours!\n")
 
-    for num_of_days_element in user_input.split(","):
+    list_of_days = user_input.split(", ")
+
+    print(list_of_days)
+    print(set(list_of_days))
+
+    print(type(list_of_days))
+    print(type(set(list_of_days)))
+
+    for num_of_days_element in set(list_of_days):
         validate_and_execute()
